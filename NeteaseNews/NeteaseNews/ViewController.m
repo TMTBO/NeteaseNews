@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "TTAHeaderLineViewController.h"
+
 
 @interface ViewController ()
 
@@ -16,7 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // 创建并添加TTAHeaderLineViewController
+    TTAHeaderLineViewController *headerLineVc = [[TTAHeaderLineViewController alloc] init];
+    [self addChildViewController:headerLineVc];
+    
+    
+    // 添加 view
+    [self.view addSubview:headerLineVc.view];
+    
 }
 
 - (void)didReceiveMemoryWarning {
