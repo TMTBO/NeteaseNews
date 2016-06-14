@@ -21,6 +21,11 @@
 		7926AA581D0FBAF40099955F /* TTALoopViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7926AA571D0FBAF40099955F /* TTALoopViewFlowLayout.m */; };
 		794D1FA21D0FCC3E00DF8F2F /* TTAHeaderLineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D1FA11D0FCC3E00DF8F2F /* TTAHeaderLineCollectionViewCell.m */; };
 		794D1FA51D10242400DF8F2F /* TTAWeakTimerTargetObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D1FA41D10242400DF8F2F /* TTAWeakTimerTargetObj.m */; };
+		794D1FAE1D102CDE00DF8F2F /* TTANewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D1FAD1D102CDE00DF8F2F /* TTANewsViewController.m */; };
+		794D1FB01D102DAF00DF8F2F /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794D1FAF1D102DAF00DF8F2F /* News.storyboard */; };
+		794D1FB31D102F4000DF8F2F /* TTANewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D1FB21D102F4000DF8F2F /* TTANewsTableViewCell.m */; };
+		794D1FB61D10301900DF8F2F /* TTANews.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D1FB51D10301900DF8F2F /* TTANews.m */; };
+		794D1FB81D10310E00DF8F2F /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 794D1FB71D10310E00DF8F2F /* topic_news.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,14 @@
 		794D1FA11D0FCC3E00DF8F2F /* TTAHeaderLineCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAHeaderLineCollectionViewCell.m; sourceTree = "<group>"; };
 		794D1FA31D10242400DF8F2F /* TTAWeakTimerTargetObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAWeakTimerTargetObj.h; sourceTree = "<group>"; };
 		794D1FA41D10242400DF8F2F /* TTAWeakTimerTargetObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAWeakTimerTargetObj.m; sourceTree = "<group>"; };
+		794D1FAC1D102CDE00DF8F2F /* TTANewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTANewsViewController.h; sourceTree = "<group>"; };
+		794D1FAD1D102CDE00DF8F2F /* TTANewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTANewsViewController.m; sourceTree = "<group>"; };
+		794D1FAF1D102DAF00DF8F2F /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		794D1FB11D102F4000DF8F2F /* TTANewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTANewsTableViewCell.h; sourceTree = "<group>"; };
+		794D1FB21D102F4000DF8F2F /* TTANewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTANewsTableViewCell.m; sourceTree = "<group>"; };
+		794D1FB41D10301900DF8F2F /* TTANews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTANews.h; sourceTree = "<group>"; };
+		794D1FB51D10301900DF8F2F /* TTANews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTANews.m; sourceTree = "<group>"; };
+		794D1FB71D10310E00DF8F2F /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
 		D3695637E20F56EBEAF2A9D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E2DCC8A23BE4B55FB275731F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E8246721D7428785301F04EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +110,7 @@
 			children = (
 				7926AA4F1D0FA7160099955F /* Tool */,
 				7926AA451D0FA6320099955F /* HeaderLine */,
+				794D1FA61D1029A300DF8F2F /* News */,
 				7926AA311D0F96A00099955F /* AppDelegate.h */,
 				7926AA321D0F96A00099955F /* AppDelegate.m */,
 				7926AA341D0F96A00099955F /* ViewController.h */,
@@ -106,6 +120,7 @@
 				7926AA3C1D0F96A00099955F /* LaunchScreen.storyboard */,
 				7926AA3F1D0F96A00099955F /* Info.plist */,
 				7926AA2E1D0F96A00099955F /* Supporting Files */,
+				794D1FB71D10310E00DF8F2F /* topic_news.json */,
 			);
 			path = NeteaseNews;
 			sourceTree = "<group>";
@@ -168,6 +183,44 @@
 				794D1FA41D10242400DF8F2F /* TTAWeakTimerTargetObj.m */,
 			);
 			name = Tool;
+			sourceTree = "<group>";
+		};
+		794D1FA61D1029A300DF8F2F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				794D1FA81D1029D900DF8F2F /* Controller */,
+				794D1FA71D1029D300DF8F2F /* View */,
+				794D1FA91D1029DF00DF8F2F /* Model */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		794D1FA71D1029D300DF8F2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				794D1FB11D102F4000DF8F2F /* TTANewsTableViewCell.h */,
+				794D1FB21D102F4000DF8F2F /* TTANewsTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		794D1FA81D1029D900DF8F2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				794D1FAC1D102CDE00DF8F2F /* TTANewsViewController.h */,
+				794D1FAD1D102CDE00DF8F2F /* TTANewsViewController.m */,
+				794D1FAF1D102DAF00DF8F2F /* News.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		794D1FA91D1029DF00DF8F2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				794D1FB41D10301900DF8F2F /* TTANews.h */,
+				794D1FB51D10301900DF8F2F /* TTANews.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		BAC1A9F658F3653A6E98A836 /* Frameworks */ = {
@@ -243,6 +296,8 @@
 				7926AA3E1D0F96A00099955F /* LaunchScreen.storyboard in Resources */,
 				7926AA3B1D0F96A00099955F /* Assets.xcassets in Resources */,
 				7926AA391D0F96A00099955F /* Main.storyboard in Resources */,
+				794D1FB81D10310E00DF8F2F /* topic_news.json in Resources */,
+				794D1FB01D102DAF00DF8F2F /* News.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,9 +358,12 @@
 			files = (
 				7926AA361D0F96A00099955F /* ViewController.m in Sources */,
 				7926AA4B1D0FA68A0099955F /* TTAHeaderLineViewController.m in Sources */,
+				794D1FB31D102F4000DF8F2F /* TTANewsTableViewCell.m in Sources */,
 				7926AA551D0FB8870099955F /* TTANetworkManager.m in Sources */,
+				794D1FAE1D102CDE00DF8F2F /* TTANewsViewController.m in Sources */,
 				7926AA331D0F96A00099955F /* AppDelegate.m in Sources */,
 				7926AA301D0F96A00099955F /* main.m in Sources */,
+				794D1FB61D10301900DF8F2F /* TTANews.m in Sources */,
 				7926AA521D0FA76A0099955F /* TTAHeaderLineLoop.m in Sources */,
 				794D1FA51D10242400DF8F2F /* TTAWeakTimerTargetObj.m in Sources */,
 				7926AA581D0FBAF40099955F /* TTALoopViewFlowLayout.m in Sources */,

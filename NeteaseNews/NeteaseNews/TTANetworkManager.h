@@ -10,4 +10,6 @@
 
 @interface TTANetworkManager : AFHTTPSessionManager
 
++(instancetype)sharedNetworkManager;
+
 @end

@@ -31,7 +31,7 @@
     NSAssert (success, @"成功回调一定要有一个值");
 
     // 从网络请求数据
-    [[TTANetworkManager manager] GET:@"http://c.m.163.com/nc/ad/headline/0-4.html"
+    [[TTANetworkManager sharedNetworkManager] GET:@"ad/headline/0-4.html"
     parameters:nil
     progress:nil
     success:^(NSURLSessionDataTask *_Nonnull task, NSDictionary *responseObject) {

@@ -11,12 +11,13 @@
 
 @implementation TTANetworkManager
 + (instancetype)sharedNetworkManager {
-    static id instance;
+    static TTANetworkManager *instance;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSURL *baseURL = [NSURL URLWithString:@"http://c.m.163.com/nc/"];
         instance = [[self alloc] initWithBaseURL:baseURL];
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     });
     
     return instance;
