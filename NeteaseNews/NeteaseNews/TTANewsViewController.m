@@ -6,9 +6,9 @@
 //  Copyright © 2016年 TobyoTenma. All rights reserved.
 //
 
-#import "TTANewsViewController.h"
 #import "TTANews.h"
 #include "TTANewsTableViewCell.h"
+#import "TTANewsViewController.h"
 
 @interface TTANewsViewController ()
 
@@ -20,19 +20,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // 加载数据
     [self loadData];
 }
 
--(void)loadData{
+- (void)loadData {
     [TTANews loadNewsWithSuccess:^(NSArray *newses) {
-        self.newses = newses;
-        
-        // 刷新数据
-        [self.tableView reloadData];
-    } failed:^(NSError *error) {
-        NSLog(@"数据加载失败,%@",error);
+      self.newses = newses;
+
+      // 刷新数据
+      [self.tableView reloadData];
+    }
+    failed:^(NSError *error) {
+      NSLog (@"数据加载失败,%@", error);
     }];
 }
 
@@ -46,16 +47,34 @@
     return self.newses.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    TTANewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell"];
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    // 获取模型
+    TTANews *news = self.newses[indexPath.row];
+
+    TTANewsTableViewCell *cell =
+    [tableView dequeueReusableCellWithIdentifier:[TTANewsTableViewCell reuseIdentifierWithNews:news]];
+
     // 设置 Cell...
-    cell.news = self.newses[indexPath.row];
-    
+    cell.news = news;
+
     return cell;
 }
 
+#pragma mark - 代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 获取模型
+    TTANews *news = self.newses[indexPath.row];
+    
+    if (news.imgextra) {
+        return 150;
+    }else if (news.imgType){
+        return 150;
+    }else{
+        return 90;
+    }
+}
 
 
 @end

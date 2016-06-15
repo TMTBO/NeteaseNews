@@ -33,6 +33,8 @@
     parameters:nil
     progress:nil
     success:^(NSURLSessionDataTask *_Nonnull task, NSDictionary *responseObject) {
+        
+        NSLog(@"%@", responseObject);
         // 从字典中取出键
         NSString *dataKey = responseObject.keyEnumerator.nextObject;
         // 取出数组

@@ -12,15 +12,27 @@
 
 
 @interface TTANewsTableViewCell ()
-
+/**
+ *  新闻图片
+ */
 @property (nonatomic, weak) IBOutlet UIImageView *iconImage;
 
+/**
+ *  新闻标题
+ */
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 
+/**
+ *  新闻简介
+ */
 @property (nonatomic, weak) IBOutlet UILabel *detailLabel;
 
+/**
+ *  跟帖数
+ */
 @property (nonatomic, weak) IBOutlet UILabel *replyLabel;
 
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imgextra;
 
 @end
 
@@ -48,6 +60,21 @@
     stringWithFormat:@"%@跟帖", news.replyCount.intValue > 10000 ?
                                 [NSString stringWithFormat:@"%.2f万", news.replyCount.floatValue / 10000] :
                                 @(news.replyCount.intValue)];
+    
+    [news.imgextra enumerateObjectsUsingBlock:^(NSDictionary *dic, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIImageView *imgView = self.imgextra[idx];
+        [imgView sd_setImageWithURL:[NSURL URLWithString:dic[@"imgsrc"]]];
+    }];
+}
+
+#pragma mark - 返回不同 cell 的征用标识
++(NSString *)reuseIdentifierWithNews:(TTANews *)news{
+    if (news.imgextra){
+        return @"ThreeImagesCell";
+    }else if (news.imgType){
+        return @"ADsCell";
+    }
+    return @"NewsCell";
 }
 
 @end

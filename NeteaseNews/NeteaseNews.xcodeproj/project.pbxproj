@@ -26,6 +26,7 @@
 		794D1FB31D102F4000DF8F2F /* TTANewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D1FB21D102F4000DF8F2F /* TTANewsTableViewCell.m */; };
 		794D1FB61D10301900DF8F2F /* TTANews.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D1FB51D10301900DF8F2F /* TTANews.m */; };
 		794D1FB81D10310E00DF8F2F /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 794D1FB71D10310E00DF8F2F /* topic_news.json */; };
+		79F6A0971D110328001401E5 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6A0961D110328001401E5 /* NSObject+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		794D1FB41D10301900DF8F2F /* TTANews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTANews.h; sourceTree = "<group>"; };
 		794D1FB51D10301900DF8F2F /* TTANews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTANews.m; sourceTree = "<group>"; };
 		794D1FB71D10310E00DF8F2F /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		79F6A0951D110328001401E5 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
+		79F6A0961D110328001401E5 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		D3695637E20F56EBEAF2A9D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E2DCC8A23BE4B55FB275731F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E8246721D7428785301F04EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +180,7 @@
 		7926AA4F1D0FA7160099955F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				79F6A0941D110328001401E5 /* LogDetail */,
 				7926AA531D0FB8870099955F /* TTANetworkManager.h */,
 				7926AA541D0FB8870099955F /* TTANetworkManager.m */,
 				794D1FA31D10242400DF8F2F /* TTAWeakTimerTargetObj.h */,
@@ -221,6 +225,15 @@
 				794D1FB51D10301900DF8F2F /* TTANews.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		79F6A0941D110328001401E5 /* LogDetail */ = {
+			isa = PBXGroup;
+			children = (
+				79F6A0951D110328001401E5 /* NSObject+Log.h */,
+				79F6A0961D110328001401E5 /* NSObject+Log.m */,
+			);
+			path = LogDetail;
 			sourceTree = "<group>";
 		};
 		BAC1A9F658F3653A6E98A836 /* Frameworks */ = {
@@ -358,6 +371,7 @@
 			files = (
 				7926AA361D0F96A00099955F /* ViewController.m in Sources */,
 				7926AA4B1D0FA68A0099955F /* TTAHeaderLineViewController.m in Sources */,
+				79F6A0971D110328001401E5 /* NSObject+Log.m in Sources */,
 				794D1FB31D102F4000DF8F2F /* TTANewsTableViewCell.m in Sources */,
 				7926AA551D0FB8870099955F /* TTANetworkManager.m in Sources */,
 				794D1FAE1D102CDE00DF8F2F /* TTANewsViewController.m in Sources */,

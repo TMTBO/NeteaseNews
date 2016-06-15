@@ -14,4 +14,9 @@
 
 @property (nonatomic, strong) TTANews *news;
 
+/**
+ *  用来获取cell 的 reuseIdentifier
+ */
++(NSString *)reuseIdentifierWithNews:(TTANews *)news;
+
 @end
